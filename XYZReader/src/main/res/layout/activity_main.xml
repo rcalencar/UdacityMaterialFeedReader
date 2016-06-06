@@ -9,17 +9,19 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="112dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="bottom"
-                android:background="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|enterAlways"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:background="?attr/colorPrimary">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -27,6 +29,7 @@
                     android:scaleType="center"
                     android:src="@drawable/logo" />
             </android.support.v7.widget.Toolbar>
+        </FrameLayout>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/activity_article_list" />
